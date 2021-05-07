@@ -45,7 +45,7 @@ module.exports = {
     extensions: [".js", ".jsx"],
   },
   performance: {
-    hints: "error",
+    hints: process.env.NODE_ENV === "production" ? "error" : false, 
     maxEntrypointSize: 580000,
     maxAssetSize: 580000,
   },
